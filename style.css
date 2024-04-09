@@ -1,0 +1,271 @@
+:root {
+    --purple-bg: #290742;
+    --dark-bg: #170027;
+    --button-bg: #9e6dc2;
+    --white: #fff;
+    --light-purple: #fbf6ff;
+    --green: #4fff4b;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+p, buttom, a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+}
+
+.container .page-wrap {
+    display: flex;
+    margin: 0 auto;
+    width: 1020px;
+}
+
+/* ------------- Padrão formato conteúdo ------------- */
+
+.container .page-wrap .contImg, .textCont {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.container .page-wrap .textCont p {
+    font-size: 15px;
+    color: black;
+}
+
+.container .page-wrap .textCont h2 {
+    font-size: 22px;
+    color: var(--dark-bg);
+}
+
+/* ------------- Header ------------- */
+
+header .container {
+    background-color: var(--purple-bg) 
+}
+
+header .container .page-wrap {
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 64px;
+}
+
+header .container .page-wrap .logo {
+    width: 126.54px;
+    height: 100%;
+}
+
+header .container .page-wrap .logo img{
+    width: 100%;
+    height: 100%;
+}
+
+header .container .page-wrap .menu ol{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 32px;
+}
+
+header .container .page-wrap .menu ol li a{
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+header .container .page-wrap .menu ol li {
+    position: relative;
+}
+
+header .container .page-wrap .menu ol li:hover:after {
+    content: "";
+    position: absolute;
+    overflow: hidden;
+    left: -8px;
+    background-color: var(--green);
+    border-radius: 2px;
+    height: 18px;
+    width: 4px;
+}
+
+header .container .page-wrap .search {
+    display: flex;
+    position: relative;
+    height: 38px;
+    gap: 0;
+}
+
+header .container .page-wrap .search input{
+    border: none;
+    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.25));
+    background-color: var(--dark-bg);
+    color: var(--white);
+    border-radius: 4px 0px 0px 4px;
+    text-indent: 20px;
+}
+
+header .container .page-wrap .search input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+header .container .page-wrap .search button {
+    height: 100%;
+    border: none;
+    border-radius: 0px 4px 4px 0px;
+    width: 50px;
+    background-color: var(--button-bg);
+    cursor: pointer;
+}
+
+header .container .page-wrap .search button img {
+    width: 20px;
+    height: 100%;
+}
+        
+header .container .page-wrap .search #list{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 8px 0;
+    background-color: var(--light-purple);
+    right: 0;
+    top: calc(38px + 8px);
+    font-size:  1rem;
+    margin-left: 90px;
+    background-color: #9e6dc2;
+    border-radius: 8px;
+    text-indent: 10px;
+    color: #fff;
+}
+
+header .container .page-wrap .search ol li {
+    padding: 4px 0;
+}
+        
+.animals{
+    display: list-item;    
+}
+
+header .container .page-wrap .search ol {
+    display: none;
+}
+
+header .container .page-wrap .search.active ol {
+    display: block;
+}
+
+/* ------------- Banner ------------- */
+
+.banner .container .page-wrap {
+    height: 400px;
+}
+
+.banner .container .page-wrap .textBanner {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+.banner .container .page-wrap .textBanner h1, p, button {
+    color: var(--button-bg);
+}
+
+.banner .container .page-wrap .textBanner h1 {
+    width: 350px;
+}
+
+.banner .container .page-wrap .textBanner p {
+    width: 400px;
+}
+
+.banner .container .page-wrap .textBanner button {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    height: 24px;
+    width: 150px;
+    padding: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.banner .container .page-wrap .textBanner button:hover {
+    width: 170px;
+}
+
+.banner .container .page-wrap .textBanner button a{
+    color: var(--button-bg);
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.banner .container .page-wrap .textBanner button a img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.banner .container .page-wrap .imageBanner {
+    display: flex;
+    padding: 60px;
+    padding-right: 0;
+}
+
+.banner {
+    position: relative;
+    background-color: var(--purple-bg)
+}
+
+.banner .container:before {
+    content: "";
+    position: absolute;
+    background-color: var(--green);
+    width: 100%;
+    height: 6px;
+    bottom: 0;
+}
+
+/* ------------- Conteúdo Principal ------------- */
+
+.principalCont .container .page-wrap {
+    padding: 60px 0;
+}
+
+.principalCont .container .page-wrap .textoPost {
+    width: 90%;
+}
+
+/* ------------- Lista de Conteúdo ------------- */
+
+.listaCont .container .page-wrap {
+    gap: 30px;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.listaCont .container .page-wrap .contImg img {
+    width: 322px;
+}
